@@ -8,5 +8,10 @@ public class CalculatorApp {
     public static void main(String[] args) {
         SpringApplication.run(CalculatorApp.class, args);
     }
+//    @Bean
+//    CalculatorEntryRepository calculatorEntryRepositoryEntryRepository(DataSource dataSource) {
+//        return new JdbcTimeEntryRepository(dataSource);
+//    }
+
 }
 
