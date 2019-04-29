@@ -28,7 +28,7 @@ public class CalculatorControllerTest {
         ResponseEntity response = controller.operation(calculatorEntry);
         //   verify(timeEntryRepository).create(timeEntryToCreate);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.CREATED);
-        assertThat(response.getBody()).isEqualTo(String.valueOf(expectedResult));
+        assertThat(response.getBody()).isEqualTo(expectedResult);
     }
 
     @Test
@@ -42,7 +42,7 @@ public class CalculatorControllerTest {
         ResponseEntity response = controller.operation(calculatorEntry);
      //   verify(timeEntryRepository).create(timeEntryToCreate);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.CREATED);
-        assertThat(response.getBody()).isEqualTo(String.valueOf(expectedResult));
+        assertThat(response.getBody()).isEqualTo(calculatorEntry);
     }
 
     @Test
@@ -56,12 +56,12 @@ public class CalculatorControllerTest {
         ResponseEntity response = controller.operation(calculatorEntry);
         //   verify(timeEntryRepository).create(timeEntryToCreate);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.CREATED);
-        assertThat(response.getBody()).isEqualTo(String.valueOf(expectedResult));
+        assertThat(response.getBody()).isEqualTo(calculatorEntry);
     }
 
     @Test
     public void testDIVIDE() throws Exception {
-        double leftOperand = 8;
+        double leftOperand = 9;
         double rightOperand = 3;
         String operator = Operation.DIVIDE.name();
         double expectedResult = leftOperand / rightOperand;
@@ -70,6 +70,6 @@ public class CalculatorControllerTest {
         ResponseEntity response = controller.operation(calculatorEntry);
         //   verify(timeEntryRepository).create(timeEntryToCreate);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.CREATED);
-        assertThat(response.getBody()).isEqualTo(String.valueOf(expectedResult));
+        assertThat(response.getBody()).isEqualTo(calculatorEntry);
     }
 }

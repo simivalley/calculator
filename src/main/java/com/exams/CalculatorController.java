@@ -24,6 +24,6 @@ public class CalculatorController {
     @PostMapping
     public ResponseEntity operation (@RequestBody CalculatorEntry calculatorEntryInbounding){
         CalculatorEntry calculatorEntry = new CalculatorEntry(calculatorEntryInbounding);
-        return  new ResponseEntity(String.valueOf(calculatorEntry.getResult()), HttpStatus.CREATED);
+        return  new ResponseEntity(calculatorEntry, HttpStatus.CREATED);
     }
 }

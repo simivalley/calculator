@@ -5,6 +5,8 @@ public class CalculatorEntry {
     private double rightOperand;
     private String operator;
 
+    private String errorMessage = "None";
+
     private double result;
 
     public CalculatorEntry() {}
@@ -13,6 +15,7 @@ public class CalculatorEntry {
         this.leftOperand = leftOperand;
         this.rightOperand = rightOperand;
         this.operator = operator;
+        apply(leftOperand, rightOperand, operator);
     }
 
     public CalculatorEntry(CalculatorEntry calculatorInbounding) {
@@ -24,7 +27,14 @@ public class CalculatorEntry {
 
     public void apply ( double leftOperand, double rightOperand, String operator ){
         result = Operation.valueOf(operator).apply(leftOperand,rightOperand);
+    }
 
+    public String getErrorMessage() {
+        return errorMessage;
+    }
+
+    public void setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
     }
 
     public double getLeftOperand() {
