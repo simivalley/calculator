@@ -86,8 +86,8 @@ public class CalculatorEntryApiTest {
 
     @Test
     public void testDivide() throws Exception {
-        double leftOperand = 2;
-        double rightOperand = 3;
+        double leftOperand = 0;
+        double rightOperand = 0;
         String operator = Operation.DIVIDE.toString();
 
         HttpHeaders headers = new HttpHeaders();

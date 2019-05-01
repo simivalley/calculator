@@ -29,7 +29,7 @@ public class CalculatorController {
     private String validateOperands(String leftOperand, String rightOperand, String operator) {
         try {
             double lOperand = Double.valueOf(leftOperand);
-            if (lOperand > Double.MAX_VALUE || lOperand < Double.MIN_VALUE) {
+            if (lOperand > Double.MAX_VALUE || lOperand < -Double.MIN_VALUE) {
                 throw new Exception("Invalid");
             }
         } catch (Exception e) {
@@ -37,7 +37,7 @@ public class CalculatorController {
         }
         try {
             double rOperand = Double.valueOf(rightOperand);
-            if (rOperand > Double.MAX_VALUE || rOperand < Double.MIN_VALUE) {
+            if (rOperand > Double.MAX_VALUE || rOperand < -Double.MIN_VALUE) {
                 throw new Exception("Invalid");
             }
         } catch (Exception e) {
