@@ -1,6 +1,7 @@
 package com.exams;
 
 public class CalculatorEntry {
+    private long id;
     private double leftOperand;
     private double rightOperand;
     private String operator;
@@ -25,12 +26,27 @@ public class CalculatorEntry {
         apply(leftOperand, rightOperand, operator);
     }
 
-    public void apply ( double leftOperand, double rightOperand, String operator ){
+
+
+    public double apply ( double leftOperand, double rightOperand, String operator ){
         result = Operation.valueOf(operator).apply(leftOperand,rightOperand);
+        return result;
+    }
+
+    public double apply (){
+        return Operation.valueOf(this.operator).apply(this.leftOperand,this.rightOperand);
     }
 
     public String getErrorMessage() {
         return errorMessage;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public void setErrorMessage(String errorMessage) {

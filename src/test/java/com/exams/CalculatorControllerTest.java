@@ -23,10 +23,9 @@ public class CalculatorControllerTest {
         double leftOperand = 2;
         double rightOperand = 3;
         String operator = Operation.PLUS.name();
-        double expectedResult = 5;
-        CalculatorEntry calculatorEntry = new CalculatorEntry(leftOperand, rightOperand, operator);
-        ResponseEntity response = controller.operation(calculatorEntry);
-        //   verify(timeEntryRepository).create(timeEntryToCreate);
+        String expectedResult = String.valueOf(leftOperand + rightOperand);
+
+        ResponseEntity response = controller.operation(String.valueOf(leftOperand), String.valueOf(rightOperand), operator);;
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.CREATED);
         assertThat(response.getBody()).isEqualTo(expectedResult);
     }
@@ -36,13 +35,11 @@ public class CalculatorControllerTest {
         double leftOperand = 8;
         double rightOperand = 3;
         String operator = Operation.MINUS.name();
-        double expectedResult = 5;
+        String expectedResult = String.valueOf(leftOperand - rightOperand);
 
-        CalculatorEntry calculatorEntry = new CalculatorEntry(leftOperand, rightOperand, operator);
-        ResponseEntity response = controller.operation(calculatorEntry);
-     //   verify(timeEntryRepository).create(timeEntryToCreate);
+        ResponseEntity response = controller.operation(String.valueOf(leftOperand), String.valueOf(rightOperand), operator);;
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.CREATED);
-        assertThat(response.getBody()).isEqualTo(calculatorEntry);
+        assertThat(response.getBody()).isEqualTo(expectedResult);
     }
 
     @Test
@@ -50,26 +47,45 @@ public class CalculatorControllerTest {
         double leftOperand = 8;
         double rightOperand = 3;
         String operator = Operation.TIMES.name();
-        double expectedResult = 24;
+        String expectedResult = String.valueOf(leftOperand * rightOperand);
 
-        CalculatorEntry calculatorEntry = new CalculatorEntry(leftOperand, rightOperand, operator);
-        ResponseEntity response = controller.operation(calculatorEntry);
-        //   verify(timeEntryRepository).create(timeEntryToCreate);
+        ResponseEntity response = controller.operation(String.valueOf(leftOperand), String.valueOf(rightOperand), operator);;
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.CREATED);
-        assertThat(response.getBody()).isEqualTo(calculatorEntry);
+        assertThat(response.getBody()).isEqualTo(expectedResult);
+        assertThat(response.getBody()).isEqualTo(expectedResult);
     }
 
     @Test
     public void testDIVIDE() throws Exception {
-        double leftOperand = 9;
+        double leftOperand = 2;
         double rightOperand = 3;
         String operator = Operation.DIVIDE.name();
-        double expectedResult = leftOperand / rightOperand;
+        String expectedResult = String.valueOf(leftOperand / rightOperand);
 
-        CalculatorEntry calculatorEntry = new CalculatorEntry(leftOperand, rightOperand, operator);
-        ResponseEntity response = controller.operation(calculatorEntry);
-        //   verify(timeEntryRepository).create(timeEntryToCreate);
+        ResponseEntity response = controller.operation(String.valueOf(leftOperand), String.valueOf(rightOperand), operator);;
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.CREATED);
-        assertThat(response.getBody()).isEqualTo(calculatorEntry);
+        assertThat(response.getBody()).isEqualTo(expectedResult);
+    }
+
+    @Test
+    public void testInvalidLeftOperand() throws Exception {
+        String leftOperand = "ab";
+        double rightOperand = 3;
+        String operator = Operation.PLUS.name();
+        String expectedResult = String.valueOf(leftOperand + rightOperand);
+
+        ResponseEntity response = controller.operation(leftOperand, String.valueOf(rightOperand), operator);;
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.BAD_REQUEST);
+    }
+
+    @Test
+    public void testInvalidRightOperand() throws Exception {
+        String rightOperand = "ac";
+        double leftOperand = 3;
+        String operator = Operation.PLUS.name();
+        String expectedResult = String.valueOf(leftOperand + rightOperand);
+
+        ResponseEntity response = controller.operation(String.valueOf(leftOperand), rightOperand, operator);;
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.BAD_REQUEST);
     }
 }
