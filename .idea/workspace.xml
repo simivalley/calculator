@@ -66,7 +66,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/exams/CalculatorController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
+            <state relative-caret-position="440">
               <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -75,7 +75,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/exams/CalculatorControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="99">
@@ -87,11 +87,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/examsapi/CalculatorEntryApiTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="153" column="5" selection-start-line="153" selection-start-column="5" selection-end-line="153" selection-end-column="5" />
+            <state relative-caret-position="182">
+              <caret line="41" selection-start-line="41" selection-end-line="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -219,10 +219,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="69" />
-    <option name="y" value="24" />
-    <option name="width" value="1440" />
-    <option name="height" value="780" />
+    <option name="x" value="125" />
+    <option name="y" value="49" />
+    <option name="width" value="1703" />
+    <option name="height" value="963" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -343,7 +343,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CalculatorEntryApiTest">
+  <component name="RunManager" selected="JUnit.CalculatorEntryApiTest.testPlus">
     <configuration name="calculator [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -426,8 +426,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CalculatorEntryApiTest" />
         <item itemvalue="JUnit.CalculatorEntryApiTest.testPlus" />
+        <item itemvalue="JUnit.CalculatorEntryApiTest" />
         <item itemvalue="JUnit.OperationTest" />
         <item itemvalue="JUnit.CalculatorControllerTest" />
         <item itemvalue="Gradle.calculator [bootRun]" />
@@ -448,15 +448,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CalculatorControllerTest - 2019.05.01 at 07h 49m 51s.xml">
-      <configuration name="CalculatorControllerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="OperationTest - 2019.05.01 at 07h 50m 11s.xml">
-      <configuration name="OperationTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="OperationTest - 2019.05.01 at 07h 50m 35s.xml">
-      <configuration name="OperationTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CalculatorEntryApiTest - 2019.05.01 at 07h 51m 02s.xml">
       <configuration name="CalculatorEntryApiTest" configurationId="JUnit" />
     </history-entry>
@@ -478,12 +469,21 @@
     <history-entry file="CalculatorEntryApiTest - 2019.05.01 at 11h 26m 56s.xml">
       <configuration name="CalculatorEntryApiTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="CalculatorEntryApiTest_testPlus - 2019.05.01 at 11h 33m 05s.xml">
+      <configuration name="CalculatorEntryApiTest.testPlus" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CalculatorEntryApiTest_testPlus - 2019.05.01 at 11h 34m 42s.xml">
+      <configuration name="CalculatorEntryApiTest.testPlus" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CalculatorEntryApiTest_testPlus - 2019.05.01 at 11h 35m 21s.xml">
+      <configuration name="CalculatorEntryApiTest.testPlus" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21215352" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21215352" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -494,7 +494,7 @@
       <window_info anchor="bottom" id="Messages" order="0" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.2988889" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.37888888" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4377778" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -550,7 +550,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/examsapi/CalculatorEntryApiTest.java</url>
-          <line>70</line>
+          <line>64</line>
           <properties />
           <option name="timeStamp" value="12" />
         </line-breakpoint>
@@ -717,9 +717,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/exams/CalculatorControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/exams/CalculatorController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
+        <state relative-caret-position="440">
           <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -729,18 +739,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/examsapi/CalculatorEntryApiTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="153" column="5" selection-start-line="153" selection-start-column="5" selection-end-line="153" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/exams/CalculatorControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="182">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

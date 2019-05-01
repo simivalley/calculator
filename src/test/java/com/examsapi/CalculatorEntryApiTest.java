@@ -36,14 +36,8 @@ public class CalculatorEntryApiTest {
         double rightOperand = 3;
         String operator = Operation.PLUS.toString();
 
-        HttpHeaders headers = new HttpHeaders();
-        HttpEntity<Object> requestEntity = new HttpEntity<Object>(headers);
-
-        ResponseEntity<String> response = restTemplate.exchange(
-                "/calculator-entries/{leftOperand}/{rightOperand}/{operator}", HttpMethod.GET, requestEntity,
-                String.class,
-                leftOperand, rightOperand, operator);
-
+        ResponseEntity<String> response = this.restTemplate.getForEntity(
+                "/calculator-entries/" + leftOperand+"/"+rightOperand+ "/"+ operator, String.class);
 
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.CREATED);
 
