@@ -31,7 +31,7 @@ public class OperationTest {
         double rightOperand = 3;
         double expectedResult = leftOperand * rightOperand;
 
-        double appliedResult = Operation.fromString("×").get().apply(leftOperand, rightOperand);
+        double appliedResult = Operation.fromString("*").get().apply(leftOperand, rightOperand);
         assertThat(appliedResult).isEqualTo(expectedResult);
     }
 

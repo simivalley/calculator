@@ -19,7 +19,7 @@ public enum Operation {
             return x - y;
         }
     },
-    TIMES("×") {
+    TIMES("*") {
         public double apply(double x, double y) {
             return x * y;
         }
