@@ -41,7 +41,7 @@ public class OperationTest {
         double righOperand = 3;
         double expectedResult = leftOperand / righOperand;
 
-        double appliedResult = Operation.fromString("/").get().apply(leftOperand, righOperand);
+        double appliedResult = Operation.fromString("÷").get().apply(leftOperand, righOperand);
         assertThat(appliedResult).isEqualTo(expectedResult);
     }
 }

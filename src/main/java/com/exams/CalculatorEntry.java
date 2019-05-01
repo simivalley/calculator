@@ -16,6 +16,7 @@ public class CalculatorEntry {
         this.leftOperand = leftOperand;
         this.rightOperand = rightOperand;
         this.operator = operator;
+        //below line should be moved out from constructor
         apply(leftOperand, rightOperand, operator);
     }
 
@@ -23,6 +24,7 @@ public class CalculatorEntry {
         this.leftOperand = calculatorInbounding.getLeftOperand();
         this.rightOperand = calculatorInbounding.getRightOperand();
         this.operator = calculatorInbounding.getOperator();
+        //below line should be moved out from constructor
         apply(leftOperand, rightOperand, operator);
     }
 

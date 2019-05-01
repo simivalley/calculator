@@ -3,6 +3,7 @@ package com.exams;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 @RestController
 @RequestMapping("/calculator-entries")
@@ -12,7 +13,7 @@ public class CalculatorController {
     }
 
 
-    @GetMapping("{leftOperand}/{rightOperand}/{operator}")
+    @RequestMapping( value ="/{leftOperand}/{rightOperand}/{operator}", method= GET)
     public ResponseEntity operation(@PathVariable String leftOperand, @PathVariable String rightOperand, @PathVariable String operator) {
         String result = validateOperands(leftOperand, rightOperand, operator);
         if (result.length() > 0) {
