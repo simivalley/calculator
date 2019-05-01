@@ -2,8 +2,10 @@ package com.exams;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-import static org.springframework.web.bind.annotation.RequestMethod.GET;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/calculator-entries")
@@ -13,7 +15,7 @@ public class CalculatorController {
     }
 
 
-    @RequestMapping( value ="/{leftOperand}/{rightOperand}/{operator}", method= GET)
+    @GetMapping ("/{leftOperand}/{rightOperand}/{operator}")
     public ResponseEntity operation(@PathVariable String leftOperand, @PathVariable String rightOperand, @PathVariable String operator) {
         String result = validateOperands(leftOperand, rightOperand, operator);
         if (result.length() > 0) {
