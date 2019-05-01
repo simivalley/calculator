@@ -1,7 +1,6 @@
 package com.examsapi;
 
 import com.exams.CalculatorApp;
-import com.exams.CalculatorEntry;
 import com.exams.Operation;
 import org.junit.Before;
 import org.junit.Test;
@@ -36,7 +35,6 @@ public class CalculatorEntryApiTest {
         double leftOperand = 2;
         double rightOperand = 3;
         String operator = Operation.PLUS.toString();
-        CalculatorEntry calculatorEntry = new CalculatorEntry(leftOperand, rightOperand, operator);
 
         HttpHeaders headers = new HttpHeaders();
         HttpEntity<Object> requestEntity = new HttpEntity<Object>(headers);
@@ -57,7 +55,6 @@ public class CalculatorEntryApiTest {
         double leftOperand = 2;
         double rightOperand = 3;
         String operator = Operation.MINUS.toString();
-        CalculatorEntry calculatorEntry = new CalculatorEntry(leftOperand, rightOperand, operator);
 
         HttpHeaders headers = new HttpHeaders();
         HttpEntity<Object> requestEntity = new HttpEntity<Object>(headers);
@@ -78,7 +75,6 @@ public class CalculatorEntryApiTest {
         double leftOperand = 2;
         double rightOperand = 3;
         String operator = Operation.TIMES.toString();
-        CalculatorEntry calculatorEntry = new CalculatorEntry(leftOperand, rightOperand, operator);
 
         HttpHeaders headers = new HttpHeaders();
         HttpEntity<Object> requestEntity = new HttpEntity<Object>(headers);
@@ -99,7 +95,7 @@ public class CalculatorEntryApiTest {
         double leftOperand = 2;
         double rightOperand = 3;
         String operator = Operation.DIVIDE.toString();
-        CalculatorEntry calculatorEntry = new CalculatorEntry(leftOperand, rightOperand, operator);
+
         HttpHeaders headers = new HttpHeaders();
         HttpEntity<Object> requestEntity = new HttpEntity<Object>(headers);
 
@@ -120,7 +116,6 @@ public class CalculatorEntryApiTest {
         double leftOperand = 2;
         double rightOperand = 3;
         String operator = "@";
-        //CalculatorEntry calculatorEntry = new CalculatorEntry(leftOperand, rightOperand, operator);
         HttpHeaders headers = new HttpHeaders();
         HttpEntity<Object> requestEntity = new HttpEntity<Object>(headers);
 
@@ -156,7 +151,6 @@ public class CalculatorEntryApiTest {
         double leftOperand =  2;
         String rightOperand = "rotten";
         String operator = "*";
-        //CalculatorEntry calculatorEntry = new CalculatorEntry(leftOperand, rightOperand, operator);
         HttpHeaders headers = new HttpHeaders();
         HttpEntity<Object> requestEntity = new HttpEntity<Object>(headers);
 
