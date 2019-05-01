@@ -29,12 +29,12 @@ public class CalculatorEntry {
 
 
     public double apply ( double leftOperand, double rightOperand, String operator ){
-        result = Operation.valueOf(operator).apply(leftOperand,rightOperand);
+        result = Operation.fromString(operator).get().apply(leftOperand,rightOperand);
         return result;
     }
 
     public double apply (){
-        return Operation.valueOf(this.operator).apply(this.leftOperand,this.rightOperand);
+        return Operation.fromString(this.operator).get().apply(this.leftOperand,this.rightOperand);
     }
 
     public String getErrorMessage() {
